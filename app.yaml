@@ -1,0 +1,18 @@
+#I need all of this for some reason
+runtime: python27
+api_version: 1
+threadsafe: true
+
+#I need this too for some reason
+handlers:
+- url: /.*
+  script: main.app
+- url: /styles
+  static_dir: styles
+
+#I'm using webapp2 to create multiple pages
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
