@@ -1,15 +1,11 @@
 body {
-  background-color: #fffcaf
-}
-
-h1{
-  text-align: center;
-  font-family: impact, Charcoal, sans-serif;
+  background-color: #fffcaf;
+  display: flex;
 }
 
 .log_in {
-/* text-align: center;
-font-family: impact, Charcoal, sans-serif; */
+text-align: center;
+font-family: impact, Charcoal, sans-serif;
 font-size: 70px;
 padding-top: 190px;
 }
@@ -26,12 +22,13 @@ input {
 }
 
 .container {
+
   background-color: white;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  width: 500px;
+  width:500px;
   height: 100%;
-  margin-left: 33%;
-  justify-content: center;
+  margin-left: 185%;
+
 }
 
 .center {
