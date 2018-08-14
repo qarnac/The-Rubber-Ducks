@@ -58,8 +58,8 @@ class SignUpPage(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/create_new', CreateNewAccPage),
-    ('/login', LoginAccPage)
-    ('/home', HomePage)
-    ('/navigation', NavPage)
+    ('/login', LoginAccPage),
+    ('/home', HomePage),
+    ('/navigation', NavPage),
     ('/signup', SignUpPage)
 ], debug=True)
