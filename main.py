@@ -65,6 +65,10 @@ app = webapp2.WSGIApplication([
     ('/login', LoginAccPage),
     ('/home', HomePage),
     ('/navigation', NavPage),
+<<<<<<< HEAD
     ('/signup', SignUpPage),
+=======
+    ('/signup', SignUpPage)
+>>>>>>> 907c4ddf9057a912a0b781ff56d88efe64ea318a
     ('/profile', ProfilePage)
 ], debug=True)
