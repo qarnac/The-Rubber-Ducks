@@ -1,5 +1,6 @@
 body {
-  background-color: #fffcaf
+  background-color: #fffcaf;
+  display: flex;
 }
 
 .log_in {
@@ -21,12 +22,13 @@ input {
 }
 
 .container {
+
   background-color: white;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  width: 500px;
+  width:500px;
   height: 100%;
-  margin-left: 33%;
-  justify-content: center;
+  margin-left: 185%;
+
 }
 
 .center {
@@ -40,5 +42,4 @@ input {
 .inputs {
   text-align: center;
   margin-right: 0;
-  
 }
