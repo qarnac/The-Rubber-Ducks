@@ -29,7 +29,7 @@ class CreateNewAccPage(webapp2.RequestHandler):
                     username = self.request.get('username'),
                     password = self.request.get('password'))
         userInfo.put()
-        mypage = env.get_template('template/home.html')
+        mypage = env.get_template('template/navigation.html')
         self.response.write(mypage.render())
 
 
@@ -37,6 +37,10 @@ class LoginAccPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('template/navigation.html')
+        self.response.write(mypage.render())
+
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
@@ -46,6 +50,9 @@ class HomePage(webapp2.RequestHandler):
 class NavPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/navigation.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('template/navigation.html')
         self.response.write(mypage.render())
 
 class SignUpPage(webapp2.RequestHandler):
