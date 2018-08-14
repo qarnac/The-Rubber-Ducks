@@ -20,12 +20,18 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         mypage = env.get_template('templates/main.html')
         self.response.write(mypage.render())
-
-
 class CreateNewAccPage(webapp2.RequestHandler):
     def get(self):
-        mypage = env.get_template('templates/create_new.html')
+        mypage = env.get_template('template/open_Acc.html')
         self.response.write(mypage.render())
+    def post(self):
+        userInfo = DuckUser(name = self.request.get('user'),
+                    username = self.request.get('username'),
+                    password = self.request.get('password'))
+        userInfo.put()
+        mypage = env.get_template('template/home.html')
+        self.response.write(mypage.render())
+
 
 class LoginAccPage(webapp2.RequestHandler):
     def get(self):
