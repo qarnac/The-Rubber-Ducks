@@ -7,15 +7,15 @@
   <div class="center">
   <div class = "container">
     <h1 class="log_in">Log in!</h1>
-    <form class="center" action="/navigation" method="post">
+    <form class="center" action="/login" method="post">
       <div class="inputs">
         <label class="login">Username: </label>
         <input type="text" name="username" value={{username}}> <br> <br>
         <label class="login">Password: </label>
         <input type="text" name="password" value={{password}}> <br> <br>
-        <input type="Submit" value="Login">
+        <input type="submit" name="" value="Login">
         <label>or: </label>
-        <input type="button" onclick="alert('Add Account Details')" value="Create a New Account">
+        <li><a href="/create_new">Create New</li>
       </div>
     </form>
   </div>

@@ -14,6 +14,11 @@ handlers:
 - url: /.*
   script: main.app
 
+- url: /navigation/.*
+  script: main.app
+  login: required
+
+
 #I'm using webapp2 to create multiple pages
 libraries:
 - name: webapp2
