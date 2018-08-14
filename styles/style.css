@@ -1,3 +1,7 @@
+body {
+  background-color: #fffcaf
+}
+
 .log_in {
 text-align: center;
 font-family: impact, Charcoal, sans-serif;
@@ -16,9 +20,25 @@ input {
 
 }
 
+.container {
+  background-color: white;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 100%;
+  margin-left: 33%;
+  justify-content: center;
+}
+
 .center {
   margin: auto;
   width: 15%;
   white-space: nowrap;
   flex: auto;
+  text-align: center;
+}
+
+.inputs {
+  text-align: center;
+  margin-right: 0;
+  
 }
