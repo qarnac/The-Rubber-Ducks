@@ -8,6 +8,6 @@ class DuckUser(ndb.Model): #this is my constructor!
     username = ndb.StringProperty(required = True)
     password = ndb.StringProperty(required = True)
 
-#This class is for creating....?
-class Duck(ndb.Model): #this is my constructor!
-    #duck info here
+# #This class is for creating....?
+# class Duck(ndb.Model): #this is my constructor!
+#     #duck info here

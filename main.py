@@ -5,6 +5,8 @@ import os
 import logging
 from models import *
 
+#this is a test
+
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -13,21 +15,21 @@ env = jinja2.Environment(
 class MainPage(webapp2.RequestHandler):
     def get(self):
         logging.info('in get self')
-        mypage = env.get_template('create_new/index.html')
+        mypage = env.get_template('templates/main.html')
         self.response.write(mypage.render())
     def post(self):
-        mypage = env.get_template('create_new/index.html')
+        mypage = env.get_template('templates/main.html')
         self.response.write(mypage.render())
 
 
 class CreateNewAccPage(webapp2.RequestHandler):
     def get(self):
-        mypage = env.get_template('template/create_new.html')
+        mypage = env.get_template('templates/create_new.html')
         self.response.write(mypage.render())
 
 class LoginAccPage(webapp2.RequestHandler):
     def get(self):
-        mypage = env.get_template('template/create_new.html')
+        mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
 
 app = webapp2.WSGIApplication([
