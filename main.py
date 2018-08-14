@@ -22,7 +22,7 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(mypage.render())
 class CreateNewAccPage(webapp2.RequestHandler):
     def get(self):
-        mypage = env.get_template('template/open_Acc.html')
+        mypage = env.get_template('template/create_new.html')
         self.response.write(mypage.render())
     def post(self):
         userInfo = DuckUser(name = self.request.get('user'),
