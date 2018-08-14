@@ -1,3 +1,13 @@
 h1 {
-color:blue;
+text-align: center;
+font-family: impact, Charcoal, sans-serif;
+}
+
+label {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+input {
+  text-align: center;
 }
