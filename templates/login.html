@@ -1,22 +1,23 @@
 <head>
   <title>Login Page</title>
-<head>
-  <title>Login Page</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
   <div>
-    <h1 class="log_in">Log in!</h1>
-  </div>
   <div class="center">
-    <form action="/navigation" method="post">
-      <label>Username: </label>
-      <input type="text" name="username" value={{username}}> <br> <br>
-      <label class="login">Password: </label>
-      <input type="text" name="password" value={{password}}> <br> <br>
-      <input type="Submit" value="Login">
-    <label>or: </label>
-    <input type="button" onclick="alert('Add Account Details')" value="Create a New Account">
-    <form>
+  <div class = "container">
+    <h1 class="log_in">Log in!</h1>
+    <form class="center" action="/navigation" method="post">
+      <div class="inputs">
+        <label class="login">Username: </label>
+        <input type="text" name="username" value={{username}}> <br> <br>
+        <label class="login">Password: </label>
+        <input type="text" name="password" value={{password}}> <br> <br>
+        <input type="Submit" value="Login">
+        <label>or: </label>
+        <input type="button" onclick="alert('Add Account Details')" value="Create a New Account">
+      </div>
+    </form>
   </div>
+</div>
 </body>

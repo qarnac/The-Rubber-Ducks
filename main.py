@@ -41,7 +41,7 @@ class LoginAccPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
     def post(self):
-        mypage = env.get_template('templates/navigation.html')
+        mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
 
 
