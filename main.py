@@ -4,6 +4,7 @@ import jinja2
 import os
 import logging
 from models import *
+from google.appengine.api import users
 from game import *
 
 #this is a test
@@ -42,11 +43,24 @@ class CreateNewAccPage(webapp2.RequestHandler):
 
 class LoginAccPage(webapp2.RequestHandler):
     def get(self):
+
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
+
     def post(self):
-        mypage = env.get_template('templates/login.html')
-        self.response.write(mypage.render())
+        user = self.request.get('username')
+        password = self.request.get('password')
+        logging.info('user is ' + user + ', password is' + password)
+        userVer = DuckUser.query(DuckUser.username==user, DuckUser.password==password).fetch()
+        logging.info(userVer)
+        if len(userVer)>0:
+            logging.info("user found")
+            mypage = env.get_template('templates/navigation.html')
+            self.response.write(mypage.render())
+        else:
+            logging.info("user not found")
+            mypage = env.get_template('templates/login.html')
+            self.response.write(mypage.render())
 
 
 class HomePage(webapp2.RequestHandler):
