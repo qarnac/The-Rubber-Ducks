@@ -1,17 +1,11 @@
 body {
   background-color: #fffcaf;
   display: flex;
-
-}
-
-h1{
-  text-align: center;
-  font-family: impact, Charcoal, sans-serif;
 }
 
 .log_in {
-/* text-align: center;
-font-family: impact, Charcoal, sans-serif; */
+text-align: center;
+font-family: impact, Charcoal, sans-serif;
 font-size: 70px;
 padding-top: 190px;
 }
@@ -33,7 +27,7 @@ input {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   width:500px;
   height: 100%;
-  margin-left: 185%; 
+  margin-left: 185%;
 
 }
 
