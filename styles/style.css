@@ -1,11 +1,11 @@
-h1 {
+.log_in {
 text-align: center;
 font-family: impact, Charcoal, sans-serif;
 font-size: 70px;
 padding-top: 190px;
 }
 
-label {
+.login {
   text-align: center;
   font-family: sans-serif;
   font-size: 15px;
@@ -19,7 +19,6 @@ input {
 .center {
   margin: auto;
   width: 15%;
-  /* padding: 10px; */
   white-space: nowrap;
   flex: auto;
 }
