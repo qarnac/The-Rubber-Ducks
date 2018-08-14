@@ -25,9 +25,12 @@ class CreateNewAccPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/create_new.html')
         self.response.write(mypage.render())
     def post(self):
-        userInfo = DuckUser(name = self.request.get('user'),
-                    username = self.request.get('username'),
-                    password = self.request.get('password'))
+        user = self.request.get('user')
+        username = self.request.get('username')
+        password = self.request.get('password')
+        userInfo = DuckUser(user = user,
+                    username = username,
+                    password = password)
         userInfo.put()
         mypage = env.get_template('templates/navigation.html')
         self.response.write(mypage.render())
