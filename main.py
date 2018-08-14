@@ -53,14 +53,18 @@ class SignUpPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/signup.html')
         self.response.write(mypage.render())
 
+class ProfilePage(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/profile.html')
+        self.response.write(mypage.render())
 
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/create_new', CreateNewAccPage),
-    ('/login', LoginAccPage)
-    ('/home', HomePage)
-    ('/navigation', NavPage)
-    ('/signup', SignUpPage)
+    ('/login', LoginAccPage),
+    ('/home', HomePage),
+    ('/navigation', NavPage),
+    ('/signup', SignUpPage),
     ('/profile', ProfilePage)
 ], debug=True)
