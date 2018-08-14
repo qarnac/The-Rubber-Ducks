@@ -10,4 +10,12 @@ label {
 
 input {
   text-align: center;
+
+}
+
+.center {
+  margin: auto;
+  width: 15%;
+  /* padding: 10px; */
+  white-space: nowrap;
 }
