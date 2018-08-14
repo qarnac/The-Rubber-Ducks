@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <head>
   <title>Create New Account</title>
@@ -10,4 +11,26 @@
     <p>Username: <input type="text" name="user" value={{username}}></p>
     <p>Password: <input type="text" name="user" value={{password}}></p>
   </form>
+=======
+
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <div class="">
+    <h1>Log in!</h1>
+  </div>
+  <div class="">
+    <form action="/user" method="post">
+      <label>Username: </label>
+      <input type="text" name="username" value={{username}}>
+      <label>Password: </label>
+      <input type="text" name="password" value={{password}}>
+      <input type="Submit" value="Login">
+    </form>
+    <label>Or: </label>
+    <input type="button" onclick="alert('Add Account Details')" value="Create a New Account">
+  </div>
+>>>>>>> 9e82e183da06cc05e7e6327fdea79680d00d41fa
 </body>
