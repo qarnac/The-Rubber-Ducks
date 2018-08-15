@@ -1,13 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--This is what the USER sees, what others see is not until laters-->
 <head>
   <title>Profile</title>
-
+  <!--Link to a stylsheet-->
 </head>
 <body>
-  <h1>Profile</h1>
-  <img src="images/RDZilla.png" alt="RDZilla"> <!--image is hardcoded in-->
-  <input type="button" onclick="alert('Input Under Construction')" value="View Friends">
-  <input type="button" onclick="alert('Friend Request Sent!')" value="Add Friend">
-  <p id="profileBio">Hello fellow ducks! I am duck.</p> <!--bio is hardcoded in-->
-  <p><a href="/forums">Ask a question in the Forums</p>
+  <div class="grid" id="left"><!--So yeah, look at twitter. Lets have this as a rectangle sticking to the left-->
+    <div id="profile_view">
+      <!--Insert Logo_1Logo_1_blackoutline.png here. This is a default User Icon FOR NOW-->
+      <h2>Name</h2><!--Will be {{name}} LATER and we'll pull this info from the database. For now, just hardcode "name"-->
+      <h3>Username</h3><!--Will be {{username}} LATER and we'll pull this info from the database. For now, just hardcode "username"-->
+      <!--Extension: add Bio option, can be edited only via settings and will be part of database-->
+    </div>
+  </div>
+  <div class="grid" id="center">
+    <div id="toolbar"> <!--aka toolbar style-->
+      <input type="button" onclick="alert('Input Under Construction')" value="View Friends">
+      <input type="button" onclick="alert('Friend Request Sent!')" value="Add Friend">
+      <!--We should have another button that says "edit profile aka one that links to settings but we all know that doesn't exist yet (so don't let it link anywhere YET)"-->
+    </div>
+    <div id="feed"><!--Should only see the user's feed aka blog posts (text only)-->
+      <!--Not sure how to do this yet, so lets hardcode some Romeo & Juliet paragraphs here for styling & testing purposes-->
+    </div>
+  </div>
 </body>
+
+<!-- Implement this up there
+<img src="images/RDZilla.png" alt="RDZilla"> image is hardcoded in-
+<input type="button" onclick="alert('Input Under Construction')" value="View Friends">
+<input type="button" onclick="alert('Friend Request Sent!')" value="Add Friend">
+<p id="profileBio">Hello fellow ducks! I am duck.</p> bio is hardcoded in-
+<p><a href="/forums">Ask a question in the Forums</p>
+-->
