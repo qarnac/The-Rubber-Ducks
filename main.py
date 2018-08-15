@@ -37,7 +37,7 @@ class CreateNewAccPage(webapp2.RequestHandler):
                     password = password)
         userInfo.put()
         jinja_values = {'name': user, 'username': username, 'password': password}
-        mypage = env.get_template('templates/navigation.html')
+        mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render(jinja_values))
 
 
@@ -101,6 +101,14 @@ class GameStartPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/gameresults.html')
         self.response.write(mypage.render(duckVars))
 
+class ForumsPage(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/forums.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('templates/forums.html')
+        self.response.write(mypage.render())
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/create_new', CreateNewAccPage),
@@ -109,5 +117,6 @@ app = webapp2.WSGIApplication([
     ('/navigation', NavPage),
     ('/signup', SignUpPage),
     ('/profile', ProfilePage),
-    ('/gamestart', GameStartPage)
+    ('/gamestart', GameStartPage),
+    ('/forums', ForumsPage)
 ], debug=True)
