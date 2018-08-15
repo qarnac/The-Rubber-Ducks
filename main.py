@@ -71,6 +71,7 @@ class HomePage(webapp2.RequestHandler):
     def post(self):
         mypage = env.get_template('templates/navigation.html')
         self.response.write(mypage.render())
+
 #class CreateNewAccPage(webapp2.RequestHandler):
 #    def get(self):
 #        mypage = env.get_template('templates/create_new.html')
