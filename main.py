@@ -6,8 +6,10 @@ import logging
 from models import *
 from google.appengine.api import users
 from game import *
+import time
 
 #this is a test
+current_user = ""
 
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -56,6 +58,7 @@ class LoginAccPage(webapp2.RequestHandler):
         logging.info(userVer)
         if len(userVer)>0:
             logging.info("user found")
+            current_user = user
             mypage = env.get_template('templates/navigation.html')
             self.response.write(mypage.render())
         else:
@@ -67,10 +70,28 @@ class LoginAccPage(webapp2.RequestHandler):
 class HomePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/home.html')
-        self.response.write(mypage.render())
+        #test by Kristian
+        all_posts = Post.query().fetch()
+        logging.info(all_posts)
+        dict = {"posts": all_posts}
+        self.response.write(mypage.render(dict))
+        #end test
     def post(self):
-        mypage = env.get_template('templates/navigation.html')
-        self.response.write(mypage.render())
+        new_post = self.request.get('new_post')
+        home_vars = {'new_post': new_post}
+        user_post = Post(text = new_post, username = current_user, time = time.asctime( time.localtime(time.time()) ))
+        user_post.put()
+        #username = self.request.get()
+        #test by Kris
+        mypage = env.get_template('templates/home.html')
+        #self.response.write(mypage.render())
+        time.sleep(1)
+        all_posts = Post.query(Post.username == current_user).fetch()
+
+        logging.info(all_posts)
+        dict = {"posts": all_posts}
+        self.response.write(mypage.render(dict))
+        #end test
 
 #class CreateNewAccPage(webapp2.RequestHandler):
 #    def get(self):

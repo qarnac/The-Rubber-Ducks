@@ -7,13 +7,22 @@
     <h1 id="home">Quacked Up</h1>
 <!--      <p><a href="/login">Return to Login screen</p> -->
     <div>
-      <form class="" action="index.html" method="post">
+      <form class="" action="/home" method="post">
         <h2>New Post</h2>
         <p> <input type="text" name="new_post" value="{{new_post}}"> </p>
         <h2> <input type="submit" name="submit_post" value="Submit Post"> </h2>
       </form>
     </div>
     <div>
+
+      <!-- TODO: DELETE THIS WHEN FINAL VERSION -->
+      {{posts}}
+
+      {% for item in posts| reverse %}
+        <div class = "post">
+          <p>{{item['text']}}</p>
+        </div>
+      {% endfor %}
       <!-- this is where new text is inputted -->
       <!-- remember to display date & time -->
     </div>
