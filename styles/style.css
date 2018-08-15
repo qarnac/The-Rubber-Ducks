@@ -26,7 +26,7 @@ input {
   background-color: white;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   width:40%;
-  height: 150%;
+  height: 130%;
   white-space: nowrap;
   text-align: center;
   align: center;
@@ -50,34 +50,60 @@ input {
 }
 
 #ForumIcon2{
-  height: 100px;
-  width: 100px;
+  height: 55px;
+  width: 55px;
 }
 
 #profileIcon{
-  height: 100px;
-  width: 100px;
+  height: 55px;
+  width: 55px;
 }
 #settingsIcon{
-  height: 100px;
-  width: 100px;
+  height: 55px;
+  width: 55px;
 }
 
 #gameIcon{
-  height: 100px;
-  width: 100px;
+  height: 55px;
+  width: 55px;
 }
 
 #friendIcon{
-  height: 100px;
-  width: 100px;
+  height: 55px;
+  width: 55px;
 }
 
 #ForumIcon1{
-  height: 100px;
-  width: 100px;
+  height: 5px;
+  width: 55px;
 }
 
 #navbody{
   margin-top: -16px;
+}
+
+#banner {
+  white-space: nowrap;
+  overflow: auto;
+  padding-left: 150px;
+}
+
+a:link {
+    color: #f9dd39;
+}
+
+/* visited link */
+a:visited {
+    color: orange;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightgrey;
+}
+
+.pic{
+  float: right;
+  padding-right: 200px;
+
 }
