@@ -4,7 +4,7 @@ body {
   display: flex;
 }
 
-.log_in {
+#log_in {
 text-align: center;
 font-family: impact, Charcoal, sans-serif;
 font-size: 70px;
