@@ -1,5 +1,6 @@
 <!DOCTYPE html>
   <head>
+    <link rel="stylesheet" href="/styles/homestyle.css">
     <meta charset="utf-8">
     <title>Quacked Up!</title>
   </head>
@@ -20,7 +21,11 @@
 
       {% for item in posts| reverse %}
         <div class = "post">
-          <p>{{item['text']}}</p>
+          <p>
+            <img class="pic" id="profilePic" src="images\Logo_1_blackoutline.png">
+            <p>{{username}}</p>
+            {{item['text']}}
+          </p>
         </div>
       {% endfor %}
       <!-- this is where new text is inputted -->

@@ -9,7 +9,6 @@ from game import *
 import time
 
 #this is a test
-current_user = ""
 
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -58,8 +57,10 @@ class LoginAccPage(webapp2.RequestHandler):
         logging.info(userVer)
         if len(userVer)>0:
             logging.info("user found")
-            current_user = user
-            mypage = env.get_template('templates/navigation.html')
+            set_user(user)
+            current_user = get_current_user()
+            logging.info("current user in login is: " + current_user)
+            mypage = env.get_template('templates/home.html')
             self.response.write(mypage.render())
         else:
             logging.info("user not found")
@@ -71,14 +72,17 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/home.html')
         #test by Kristian
-        all_posts = Post.query().fetch()
-        logging.info(all_posts)
-        dict = {"posts": all_posts}
-        self.response.write(mypage.render(dict))
+#        all_posts = Post.query().fetch()
+#        logging.info(all_posts)
+#        dict = {"posts": all_posts}
+        self.response.write(mypage.render())
         #end test
     def post(self):
         new_post = self.request.get('new_post')
-        home_vars = {'new_post': new_post}
+#        username = current_user
+        logging.info("new post is:" + new_post)
+        current_user = get_current_user()
+        logging.info(current_user)
         user_post = Post(text = new_post, username = current_user, time = time.asctime( time.localtime(time.time()) ))
         user_post.put()
         #username = self.request.get()
@@ -89,27 +93,11 @@ class HomePage(webapp2.RequestHandler):
         all_posts = Post.query(Post.username == current_user).fetch()
 
         logging.info(all_posts)
-        dict = {"posts": all_posts}
+        dict = {"posts": all_posts,
+                "username": current_user}
         self.response.write(mypage.render(dict))
         #end test
 
-#class CreateNewAccPage(webapp2.RequestHandler):
-#    def get(self):
-#        mypage = env.get_template('templates/create_new.html')
-#        self.response.write(mypage.render())
-#        logging.info('in create new account page')
-#    def post(self):
-#        user = self.request.get('user')
-#        username = self.request.get('username')
-#        password = self.request.get('password')
-#        logging.info('user is ' + user + ', username is ' + username + ", password is " + password)
-#        userInfo = DuckUser(name = user,
-#                    username = username,
-#                    password = password)
-#        userInfo.put()
-#        jinja_values = {'name': user, 'username': username, 'password': password}
-#        mypage = env.get_template('templates/login.html')
-#        self.response.write(mypage.render(jinja_values))
 class NavPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/navigation.html')
