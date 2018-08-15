@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <head>
   <title>Create New Account</title>
-  <link rel="stylesheet" href="../styles/newstyle.css">
+  <link rel="stylesheet" href="/styles/style.css">
   <meta charset = "UTF-8">
 </head>
 <body>
+  <div align= "center" >
+  <div class = "container">
   <!--Insert Quack Logo here-->
-  <h1 id="create">Create New Account!</h1>
+  <img id="quackLogo" src="images\Logo_1_blackoutline.png">
+  <h1 id="log_in">Create an Account!</h1>
   <br>
   <form action="/create_new" method="post">
-    <p>Name: <input type="text" name="user" value={{user}}></p>
-    <p>Username: <input type="text" name="username" value={{username}}></p>
-    <p>Password: <input type="text" name="password" value={{password}}></p>
+    <div class="inputs">
+    <label class="login">Name: </label> <input type="text" name="user" value={{user}}><br>
+    <label class="login">Username: </label> <input type="text" name="username" value={{username}}><br>
+    <label class="login">Password: </label> <input type="text" name="password" value={{password}}><br>
     <input type="Submit" value="Create!">
     <p><a href="/forums">Ask a question in the Forums</p>
+    </div>
   </form>
+ </div>
+</div>
 </body>

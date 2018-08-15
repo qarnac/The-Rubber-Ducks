@@ -1,14 +1,14 @@
 body {
-  margin-top: -50px;
+  margin-top: 5px;
   background-color: #fffcaf;
-  display: flex;
+  align-content: center;
 }
 
 #log_in {
 text-align: center;
 font-family: impact, Charcoal, sans-serif;
 font-size: 70px;
-padding-top: 190px;
+padding-top: 10px;
 color: orange;
 }
 
@@ -24,13 +24,13 @@ input {
 }
 
 .container {
-
   background-color: white;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   width:40%;
   height: 100%;
   white-space: nowrap;
   text-align: center;
+  align: center;
 }
 
 .inputs {
@@ -41,4 +41,5 @@ input {
 #quackLogo{
   height: 100px;
   width: 100px;
+  padding-top: 100px;
 }
