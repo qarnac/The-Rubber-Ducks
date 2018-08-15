@@ -7,20 +7,20 @@
   <div align= "center" >
   <div class = "container">
     <!--Insert Quack Logo here-->
-    <img id="quackLogo" src="images\Logo_1_blackoutline.png">
-    <h1 id="log_in">Log in!</h1>
+    <img class="quackLogo" src="images\Logo_1_blackoutline.png">
+    <h1 id= "Logo"> Quacked up </h1>
+    <h1 class= "orange">Log in!</h1>
     <form action="/login" method="post">
 
       <div class="inputs">
+
         <label class="login">Username: </label>
         <input type="text" name="username" value={{username}}> <br> <br>
         <label class="login">Password: </label>
         <input type="text" name="password" value={{password}}> <br> <br>
         <input type="submit" name="" value="Login">
         <label>or: </label>
-        <li><a href="/create_new">Create New</li>
-        <p><a href="/forums">Ask a question in the Forums</p> <!--????-->
-      </div>
+        <p><a href="/create_new">Create New</p>
     </form>
   </div>
 </div>
