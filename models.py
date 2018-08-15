@@ -12,6 +12,9 @@ class Post(ndb.Model): #this is for the feed/home page!
     username = ndb.StringProperty(required = False)
     text = ndb.StringProperty(required = True)
     time = ndb.StringProperty(required = True)
+
+class Friends(ndb.Model):
+    friendName = ndb.StringProperty(required = False, default="Duck Person")
 # might want to include username & profile icon and picture thing
 
 # #This class is for creating....?
