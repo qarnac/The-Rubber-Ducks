@@ -77,3 +77,7 @@ input {
   height: 100px;
   width: 100px;
 }
+
+#navbody{
+  margin-top: -16px;
+}
