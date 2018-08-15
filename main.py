@@ -57,10 +57,9 @@ class LoginAccPage(webapp2.RequestHandler):
         logging.info(userVer)
         if len(userVer)>0:
             logging.info("user found")
-            set_user(user)
-            current_user = get_current_user()
-            logging.info("current user in login is: " + current_user)
+            logging.info("current user in login is: " + user)
             mypage = env.get_template('templates/home.html')
+            self.response.set_cookie('current_user', user)
             self.response.write(mypage.render())
         else:
             logging.info("user not found")
@@ -81,8 +80,8 @@ class HomePage(webapp2.RequestHandler):
         new_post = self.request.get('new_post')
 #        username = current_user
         logging.info("new post is:" + new_post)
-        current_user = get_current_user()
-        logging.info(current_user)
+        current_user = self.request.cookies.get('current_user')
+        logging.info("Cookies show: " + current_user)
         user_post = Post(text = new_post, username = current_user, time = time.asctime( time.localtime(time.time()) ))
         user_post.put()
         #username = self.request.get()
@@ -97,6 +96,7 @@ class HomePage(webapp2.RequestHandler):
                 "username": current_user}
         self.response.write(mypage.render(dict))
         #end test
+
 
 class NavPage(webapp2.RequestHandler):
     def get(self):
