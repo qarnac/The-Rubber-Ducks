@@ -1,15 +1,14 @@
 body {
   margin-top: 5px;
   background-color: #fffcaf;
-  align-content: center;
 }
 
-#log_in {
-text-align: center;
-font-family: impact, Charcoal, sans-serif;
-font-size: 70px;
-padding-top: 10px;
-color: orange;
+.orange {
+  text-align: center;
+  font-family: impact, Charcoal, sans-serif;
+  font-size: 70px;
+  padding-top: 10px;
+  color: orange;
 }
 
 .login {
@@ -38,7 +37,7 @@ input {
   margin-right: 0;
 }
 
-#quackLogo{
+.quackLogo{
   height: 100px;
   width: 100px;
   padding-top: 100px;

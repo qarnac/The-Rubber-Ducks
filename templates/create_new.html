@@ -5,11 +5,11 @@
   <meta charset = "UTF-8">
 </head>
 <body>
-  <div align= "center" >
+  <div align= "center">
   <div class = "container">
   <!--Insert Quack Logo here-->
-  <img id="quackLogo" src="images\Logo_1_blackoutline.png">
-  <h1 id="log_in">Create an Account!</h1>
+  <img class="quackLogo" src="images\Logo_1_blackoutline.png">
+  <h1 class="orange">Create an Account!</h1>
   <br>
   <form action="/create_new" method="post">
     <div class="inputs">
@@ -17,7 +17,6 @@
     <label class="login">Username: </label> <input type="text" name="username" value={{username}}><br>
     <label class="login">Password: </label> <input type="text" name="password" value={{password}}><br>
     <input type="Submit" value="Create!">
-    <p><a href="/forums">Ask a question in the Forums</p>
     </div>
   </form>
  </div>
