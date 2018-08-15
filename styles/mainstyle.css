@@ -27,3 +27,8 @@ a:visited {
 a:hover {
     color: lightgrey;
 }
+
+#quackLogo{
+  height: 100px;
+  width: 100px;
+}
