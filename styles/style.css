@@ -30,6 +30,7 @@ input {
   white-space: nowrap;
   text-align: center;
   align: center;
+  margin: auto;
 }
 
 .inputs {
