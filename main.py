@@ -71,7 +71,23 @@ class HomePage(webapp2.RequestHandler):
     def post(self):
         mypage = env.get_template('templates/navigation.html')
         self.response.write(mypage.render())
-
+#class CreateNewAccPage(webapp2.RequestHandler):
+#    def get(self):
+#        mypage = env.get_template('templates/create_new.html')
+#        self.response.write(mypage.render())
+#        logging.info('in create new account page')
+#    def post(self):
+#        user = self.request.get('user')
+#        username = self.request.get('username')
+#        password = self.request.get('password')
+#        logging.info('user is ' + user + ', username is ' + username + ", password is " + password)
+#        userInfo = DuckUser(name = user,
+#                    username = username,
+#                    password = password)
+#        userInfo.put()
+#        jinja_values = {'name': user, 'username': username, 'password': password}
+#        mypage = env.get_template('templates/login.html')
+#        self.response.write(mypage.render(jinja_values))
 class NavPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/navigation.html')
