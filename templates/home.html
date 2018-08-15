@@ -1,16 +1,21 @@
 <!DOCTYPE html>
   <head>
-    <link rel="stylesheet" href="/styles/homestyle.css">
     <meta charset="utf-8">
     <title>Quacked Up!</title>
+      <link rel="stylesheet" href="/styles/style.css">
   </head>
   <body>
-    <h1 id="home">Quacked Up</h1>
+    <div class= "container"
+    <h1 id="Logo">Quacked Up</h1>
 <!--      <p><a href="/login">Return to Login screen</p> -->
     <div>
       <form class="" action="/home" method="post">
-        <h2>New Post</h2>
-        <p> <input type="text" name="new_post" value="{{new_post}}"> </p>
+        <h2 class= "orange">New Post</h2>
+        <textarea rows="4" cols="50">
+        New Post
+        </textarea>
+
+        <!-- <p> <input style="height: 200px" size= "25%" type="textarea" name="new_post" value="{{new_post}}"> </p> -->
         <h2> <input type="submit" name="submit_post" value="Submit Post"> </h2>
       </form>
     </div>
@@ -31,4 +36,5 @@
       <!-- this is where new text is inputted -->
       <!-- remember to display date & time -->
     </div>
+  </div>
   </body>
