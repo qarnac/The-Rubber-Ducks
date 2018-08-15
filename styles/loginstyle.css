@@ -27,17 +27,9 @@ input {
 
   background-color: white;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  width:500px;
+  width:40%;
   height: 100%;
-  margin-left: 185%;
-
-}
-
-.center {
-  margin: auto;
-  width: 15%;
   white-space: nowrap;
-  flex: auto;
   text-align: center;
 }
 
