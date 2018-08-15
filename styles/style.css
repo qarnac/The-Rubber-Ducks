@@ -1,6 +1,11 @@
+html, body{
+  height: 100%;
+}
+
 body {
   margin-top: 5px;
   background-color: #fffcaf;
+
 }
 
 .orange {
@@ -80,7 +85,7 @@ input {
 }
 
 #navbody{
-  margin-top: -16px;
+  margin-top: -42px;
 }
 
 .banners {
