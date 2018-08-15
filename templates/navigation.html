@@ -2,16 +2,29 @@
 <head>
   <title>Navigation Page</title>
   <link rel="stylesheet" href="style.css">
+  <!--Let's makes a seperate navigation.css stylesheet-->
 </head>
 <body>
-  <div class="">
-    <h1>Navigation Page</h1>
-  </div>
-  <div class="">
-    <p><a href="/">Feed</p> <br>
-    <p><a href="/profile">Profile</p> <br>
-    <p><a href="/">Settings</p> <br>
-    <p><a href="/">Game</p> <br>
+  <!--This grid will have 1 row, 3 columns. Size the columns properly-->
+  <!--And then place id=center in the center column (we do this for every page except main.html)-->
+  <div class="grid" id="center">
+    <!--Remove "header" id only until we're done with navigation.css-->
+    <div id="header">
+      <h1>Navigation Page</h1>
+    </div>
+    <!--I put all of the links so we can style them as banners going down horizontally-->
+    <div id="banner">
+      <h2><a href="/">Feed</h2>
+    </div>
+    <div id="banner">
+      <h2><a href="/profile">Profile</h2>
+    </div>
+    <div id="banner">
+      <h2><a href="/">Settings</h2>
+    </div>
+    <div id="banner">
+      <h2><a href="/">Game</h2>
+    </div>
   </div>
 </body>
 <!-- Ex: <p href="http://www.rubberducks.com/home">Home</p>
