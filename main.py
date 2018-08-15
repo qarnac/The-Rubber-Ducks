@@ -13,7 +13,7 @@ env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
-
+#DONT TOUCH THIS UNLESS COMPLETLY NECESSARY
 class MainPage(webapp2.RequestHandler):
     def get(self):
         logging.info('in get self')
@@ -22,6 +22,7 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         mypage = env.get_template('templates/main.html')
         self.response.write(mypage.render())
+#DONT TOUCH THIS UNLESS COMPLETLY NECESSARY
 class CreateNewAccPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/create_new.html')
@@ -40,7 +41,7 @@ class CreateNewAccPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render(jinja_values))
 
-
+#DONT TOUCH THIS UNLESS COMPLETLY NECESSARY
 class LoginAccPage(webapp2.RequestHandler):
     def get(self):
 
