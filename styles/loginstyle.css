@@ -45,3 +45,8 @@ input {
   text-align: center;
   margin-right: 0;
 }
+
+#quackLogo{
+  height: 100px;
+  width: 100px;
+}
