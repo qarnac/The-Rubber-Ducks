@@ -8,6 +8,7 @@ class DuckUser(ndb.Model): #this is my constructor!
     password = ndb.StringProperty(required = True)
 
 class Post(ndb.Model): #this is for the feed/home page!
+    name = ndb.StringProperty(required = False)
     username = ndb.StringProperty(required = False)
     text = ndb.StringProperty(required = True)
     time = ndb.StringProperty(required = True)
