@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <head>
+<<<<<<< HEAD
   <title>Quacked Up</title>
+=======
+  <title>Quacked Up! - Welcome</title>
+>>>>>>> 1f5ad7c0815b8263d1e1c355470ac8957feee5d4
   <link rel="stylesheet" href="../styles/mainstyle.css">
   <!--Let's makes a seperate mainstyle.css stylesheet-->
   <meta charset = "UTF-8">
@@ -8,18 +12,23 @@
 <body>
   <!--This is going to be a grid with 1 row and 2 cloumns, splitting the screen in half-->
   <div class="grid">
-    <div id = "">
-        <img class="pic" id="profileIcon" src="images\ProfileIcon.png"><h2>Create your own Duck Profile.</h2>
-        <img class="pic" id="friendIcon" src="images\FriendsIcon.png"><h2>Connect with other Duck friends.</h2>
-        <img class="pic" id="ForumIcon1" src="images\ForumIcon_1.png"><h2>Quack on the Forum.</h2> <!--this is a quacking website-->
+    <div id = "left1">
+      <img class="pic" id="profileIcon" src="images\ProfileIcon.png">
+      <img class="pic" id="friendIcon" src="images\FriendsIcon.png">
+      <img class="pic" id="ForumIcon1" src="images\ForumIcon_1.png">
     </div><!--We can color it #B3E5FC-->
 
-    <div id = "">
+    <div id = "left2">
+      <h2 class="textting" id="profileText">Create your own Duck Profile.</h2>
+      <h2 class="textting">Connect with other Duck friends.</h2>
+      <h2 class="textting">Quack on the Forum.</h2>
+    </div>
+    <div id = "right">
       <!--uhhhh I don't think this is going to work...-->
       <img class="pic" id="quackLogo" src="images\Logo_1_blackoutline.png">
-      <h1 id= "welcome">Welcome to Quacked Up! See what other Ducks are quacking about. (Probably cringy, change as you wish)</h1>
+      <h1 id= "welcome">Welcome to Quacked Up!<br>See what other Ducks are quacking about.</h1>
       <br>
-      <h2>Join Quack today.</h2>
+      <h2 id="joinq">Join Quacked Up today.</h2>
       <p><a href="/login">Login</li> <!--Make sure these are links-->
       <br>
       <p><a href="/create_new">Create New Account</li><!--Style them as seperate divs so they LOOK like buttons :) (Marissa will do this last)-->

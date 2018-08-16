@@ -6,6 +6,7 @@ import logging
 from models import *
 from google.appengine.api import users
 from game import *
+import time
 
 #this is a test
 
@@ -56,7 +57,9 @@ class LoginAccPage(webapp2.RequestHandler):
         logging.info(userVer)
         if len(userVer)>0:
             logging.info("user found")
-            mypage = env.get_template('templates/navigation.html')
+            logging.info("current user in login is: " + user)
+            mypage = env.get_template('templates/home.html')
+            self.response.set_cookie('current_user', user)
             self.response.write(mypage.render())
         else:
             logging.info("user not found")
@@ -67,28 +70,34 @@ class LoginAccPage(webapp2.RequestHandler):
 class HomePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/home.html')
+        #test by Kristian
+#        all_posts = Post.query().fetch()
+#        logging.info(all_posts)
+#        dict = {"posts": all_posts}
         self.response.write(mypage.render())
+        #end test
     def post(self):
-        mypage = env.get_template('templates/navigation.html')
-        self.response.write(mypage.render())
+        new_post = self.request.get('new_post')
+#        username = current_user
+        logging.info("new post is:" + new_post)
+        current_user = self.request.cookies.get('current_user')
+        logging.info("Cookies show: " + current_user)
+        user_post = Post(text = new_post, username = current_user, time = time.asctime( time.localtime(time.time()) ))
+        user_post.put()
+        #username = self.request.get()
+        #test by Kris
+        mypage = env.get_template('templates/home.html')
+        #self.response.write(mypage.render())
+        time.sleep(1)
+        all_posts = Post.query(Post.username == current_user).fetch()
 
-#class CreateNewAccPage(webapp2.RequestHandler):
-#    def get(self):
-#        mypage = env.get_template('templates/create_new.html')
-#        self.response.write(mypage.render())
-#        logging.info('in create new account page')
-#    def post(self):
-#        user = self.request.get('user')
-#        username = self.request.get('username')
-#        password = self.request.get('password')
-#        logging.info('user is ' + user + ', username is ' + username + ", password is " + password)
-#        userInfo = DuckUser(name = user,
-#                    username = username,
-#                    password = password)
-#        userInfo.put()
-#        jinja_values = {'name': user, 'username': username, 'password': password}
-#        mypage = env.get_template('templates/login.html')
-#        self.response.write(mypage.render(jinja_values))
+        logging.info(all_posts)
+        dict = {"posts": all_posts,
+                "username": current_user}
+        self.response.write(mypage.render(dict))
+        #end test
+
+
 class NavPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/navigation.html')

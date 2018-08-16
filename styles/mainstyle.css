@@ -1,3 +1,45 @@
+/*Find a way to change the link's color*/
+
+body{
+  margin:0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  grid-template-rows: 1000px; /*Change this later to accommodate to screen height??*/
+}
+
+#left1 {
+  grid-column: 1/2;
+  background-color: #B3E5FC;
+}
+#left2 {
+  grid-column: 2/2;
+  text-align: left;
+  background-color: #B3E5FC;
+}
+#right {
+  grid-column: 3/5;
+}
+
+#profileText {
+  margin-top: 50%;
+}
+
+#profileIcon {
+  margin-top: 90%;
+}
+
+#quackLogo{
+  height: 100px;
+  width: 100px;
+  margin-top: 30%;
+}
+
+h2 {
+  font-size: 10px;
+}
 
 h1{
   text-align: center;
@@ -8,14 +50,16 @@ h1{
 div{
   font-family: sans-serif;
   text-align: center;
-  font-size: 20px
+  font-size: 20px;
 }
 
 #welcome{
-  color: #f9d73b;
+  color: black;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
 }
 a:link {
-    color: yellow;
+    color: #f9dd39;
 }
 
 /* visited link */
@@ -28,21 +72,41 @@ a:hover {
     color: lightgrey;
 }
 
-#quackLogo{
-  height: 100px;
-  width: 100px;
-}
+
 #profileIcon{
+  display: flex;
+  flex-direction: column;
   height: 100px;
   width: 100px;
 }
 
 #friendIcon{
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
   height: 100px;
   width: 100px;
 }
 
-#ForumIcon1{
+#ForumIcon1 {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
   height: 100px;
   width: 100px;
+}
+.textting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 32px;
+  /*margin-top: 30%;*/
+}
+
+
+
+#joinq{
+  font-size: 25px;
+  font-family: 'Roboto' sans-serif;
+  color: black;
 }
