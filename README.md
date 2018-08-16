@@ -16,3 +16,5 @@ assist Michael 2
 Michael(the new first)
 FIRST
 I'm going to assist with finishing up the profile page & the friends list. Afterwards comes the game.
+
+ADD DUCKS TO THE BACKGROUND
