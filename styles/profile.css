@@ -1,0 +1,52 @@
+
+h1{
+  text-align: center;
+  font-family: impact, Charcoal, sans-serif;
+  font-size: 90px
+}
+
+div{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px
+}
+
+#welcome{
+  color: #f9d73b;
+}
+a:link {
+    color: yellow;
+}
+
+/* visited link */
+a:visited {
+    color: orange;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightgrey;
+}
+
+#quackLogo{
+  height: 100px;
+  width: 100px;
+}
+#profileIcon{
+  height: 100px;
+  width: 100px;
+}
+
+#friendIcon{
+  height: 100px;
+  width: 100px;
+}
+
+#ForumIcon1{
+  height: 100px;
+  width: 100px;
+}
+
+#left{
+  margin-right: 200px;
+}

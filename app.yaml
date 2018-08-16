@@ -5,10 +5,19 @@ threadsafe: true
 
 #I need this too for some reason
 handlers:
-- url: /.*
-  script: main.app
 - url: /styles
   static_dir: styles
+
+- url: /images
+  static_dir: images
+
+- url: /.*
+  script: main.app
+
+- url: /navigation/.*
+  script: main.app
+  login: required
+
 
 #I'm using webapp2 to create multiple pages
 libraries:

@@ -1,13 +1,25 @@
-<!DOCTYPE html>
 <head>
-  <title>Create New Account</title>
-  <meta charset = "UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-  <h1>Log In!</h1>
-  <br>
-  <form action="/login" method="post">
-    <p>Username: <input type="text" name="user" value={{username}}></p>
-    <p>Password: <input type="text" name="user" value={{password}}></p>
-  </form>
+  <div class = "container">
+    <!--Insert Quack Logo here-->
+    <img class="quackLogo" src="images\Logo_1_blackoutline.png">
+    <h1 id= "Logo"> Quacked up </h1>
+    <h1 class= "orange">Log in!</h1>
+    <form action="/login" method="post">
+
+      <div class="inputs">
+
+        <label class="login">Username: </label>
+        <input type="text" name="username" value={{username}}> <br> <br>
+        <label class="login">Password: </label>
+        <input type="text" name="password" value={{password}}> <br> <br>
+        <input type="submit" name="" value="Login">
+        <label>or: </label>
+        <p><a href="/create_new">Create New</p> <!--Why is this below and not in-line with the login and or??????-->
+    </form>
+  </div>
+</div>
 </body>

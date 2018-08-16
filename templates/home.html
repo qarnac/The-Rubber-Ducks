@@ -1,1 +1,40 @@
-<!--EMPTY-->
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quacked Up!</title>
+      <link rel="stylesheet" href="/styles/homestyle.css">
+  </head>
+  <body>
+    <div class= "container"
+    <h1 id="Logo">Quacked Up</h1>
+<!--      <p><a href="/login">Return to Login screen</p> -->
+    <div>
+      <form class="" action="/home" method="post">
+        <h2 class= "orange">New Post</h2>
+        <textarea rows="4" cols="50" name="new_post">
+        Enter text here
+        </textarea>
+
+        <!-- <p> <input style="height: 200px" size= "25%" type="textarea" name="new_post" value="{{new_post}}"> </p> -->
+        <h2> <input type="submit" name="submit_post" value="Submit Post"> </h2>
+      </form>
+    </div>
+    <div>
+
+      <!-- TODO: DELETE THIS WHEN FINAL VERSION -->
+      <!--{{posts}} output for Dr.O. Do not remove-->
+
+      {% for item in posts| reverse %}
+        <div class = "post">
+          <p>
+            <img class="pic" id="profilePic" src="images\Logo_1_blackoutline.png">
+            <p id="textBubble">{{username}}</p>
+            {{item['text']}}
+          </p>
+        </div>
+      {% endfor %}
+      <!-- this is where new text is inputted -->
+      <!-- remember to display date & time -->
+    </div>
+  </div>
+  </body>

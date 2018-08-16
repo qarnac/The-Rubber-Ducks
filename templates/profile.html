@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!--This is what the USER sees, what others see is not until laters-->
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="../styles/profile.css">
+  <!--Link to a stylsheet-->
+</head>
+<body>
+  <div class="grid" id="left"><!--So yeah, look at twitter. Lets have this as a rectangle sticking to the left-->
+    <div id="profile_view">
+      <img class="pic" id="quackLogo" src="images\Logo_1_blackoutline.png">  <!--Insert Logo_1Logo_1_blackoutline.png here. This is a default User Icon FOR NOW-->
+      <h2>{{name}}</h2><!--Will be {{name}} LATER and we'll pull this info from the database. For now, just hardcode "name"-->
+      <h3>{{username}}</h3><!--Will be {{username}} LATER and we'll pull this info from the database. For now, just hardcode "username"-->
+      <!--Extension: add Bio option, can be edited only via settings and will be part of database-->
+    </div>
+  </div>
+
+  <div class="grid" id="center">
+    <div id="toolbar"> <!--aka toolbar style-->
+      <p>Friends: 111</p>
+      <input type="button" onclick="alert('Friend Request Sent!')" value="Add Friend">
+      <input type="button" onclick="alert('Editting Profile')" value="Edit Profile">
+    </div>
+    <div id="feed"><!--Should only see the user's feed aka blog posts (text only)-->
+      <br>
+      <p1> How much wood could a wood chuck chuck if a wood chuck could chuck wood? </p1>
+    </div>
+  </div>
+</body>

@@ -1,8 +1,136 @@
 <!DOCTYPE html>
 <head>
-  <title>Create New Account</title>
+  <title>Quacked Up! - Welcome</title>
+  <link rel="stylesheet" href="../styles/mainstyle.css">
+  <!--Let's makes a seperate mainstyle.css stylesheet-->
   <meta charset = "UTF-8">
 </head>
 <body>
-  <h1>Welcome to [Website name]!</h1>
+  <!--This is going to be a grid with 1 row and 2 cloumns, splitting the screen in half-->
+  <div class="grid">
+    <div id = "left1">
+      <img class="pic" id="profileIcon" src="images\ProfileIcon.png">
+      <img class="pic" id="friendIcon" src="images\FriendsIcon.png">
+      <img class="pic" id="ForumIcon1" src="images\ForumIcon_1.png">
+    </div><!--We can color it #B3E5FC-->
+
+    <div id = "left2">
+      <h2 class="textting" id="profileText">Create your own Duck Profile.</h2>
+      <h2 class="textting">Connect with other Duck friends.</h2>
+      <h2 class="textting">Quack on the Forum.</h2>
+    </div>
+    <div id = "right">
+      <!--uhhhh I don't think this is going to work...-->
+      <img class="pic" id="quackLogo" src="images\Logo_1_blackoutline.png">
+      <h1 id= "welcome">Welcome to Quacked Up!<br>See what other Ducks are quacking about.</h1>
+      <br>
+      <h2 id="joinq">Join Quacked Up today.</h2>
+      <p><a href="/login">Login</li> <!--Make sure these are links-->
+      <br>
+      <p><a href="/create_new">Create New Account</li><!--Style them as seperate divs so they LOOK like buttons :) (Marissa will do this last)-->
+      <br>
+      <p><a href="/forums">Ask a question in the Forums</p><!--How do you do this if you're not logged in yet?-->
+    </div>
+  </div>
 </body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<!--
+<div class="row">
+  <div class="column" style="background-color:#red;">
+    <h2>Column 1</h2>
+    <p><a href="/forums">Ask a question in the Forums</p>
+  </div>
+  <div class="column" style="background-color:white;">
+      <p><a href="/create_new">Create New Account</li>
+      <p><a href="/login">Login</li>
+  </div>
+</div>
+
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "100%";
+    }
+}
+
+// Grid View
+function gridView() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
+    }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+-->
+
+<!-- Not sure what this was for lol
+   <form action="/navigation" method="post">
+     <input type="Submit" value="Login">
+     <form action="/create_new" method="post">
+       <input type="Submit" value="Create New Account">
+     </form>
+   </form> -->
