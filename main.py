@@ -83,7 +83,8 @@ class HomePage(webapp2.RequestHandler):
         logging.info("new post is:" + new_post)
         current_username = self.request.cookies.get('current_username')
         current_name = self.request.cookies.get('current_name')
-        logging.info("Cookies show: " + 'current_username')
+        logging.info("Cookies show:")
+        logging.info(current_username)
         user_post = Post(text = new_post, username = current_username, name = current_name, time = time.asctime( time.localtime(time.time()) ))
         user_post.put()
         #username = self.request.get()
@@ -120,11 +121,23 @@ class ProfilePage(webapp2.RequestHandler):
         dict = {"friend_count": 0}
         self.response.write(mypage.render(dict))
     def post(self):
-        current_user = self.request.cookies.get('current_user')
+        current_user = self.request.cookies.get('current_username')
+        logging.info("check1")
+        logging.info(current_user)
+
         user = DuckUser.query(DuckUser.username == current_user).fetch()
+        logging.info("check2")
+        logging.info(user)
+
         user[0].friendCount = user[0].friendCount + 1
+        logging.info("check3")
+        logging.info(user[0].friendCount)
+
         user[0].put()
+        logging.info("check4")
+
         dict = {"friend_count": user[0].friendCount}
+        logging.info("check5")
         mypage = env.get_template('templates/profile.html')
         self.response.write(mypage.render(dict))
 
