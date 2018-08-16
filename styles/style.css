@@ -64,6 +64,11 @@ textarea{
   padding-top: 100px;
 }
 
+#profilePic{
+  height:55px;
+  width: 55px;
+}
+
 #ForumIcon2{
   height: 55px;
   width: 55px;
