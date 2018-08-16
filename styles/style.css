@@ -8,10 +8,10 @@ body {
 
 }
 
-.black {
+.orange {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   padding-top: 10px;
   color: black;
 }
@@ -53,6 +53,7 @@ body {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 90px;
+  color: orange;
 }
 
 #ForumIcon2{
