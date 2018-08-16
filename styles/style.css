@@ -8,12 +8,12 @@ body {
 
 }
 
-.orange {
+.black {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 70px;
   padding-top: 10px;
-  color: orange;
+  color: black;
 }
 
 .login {
@@ -89,9 +89,15 @@ body {
 }
 
 .banners {
+  margin: 30px;
   white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   overflow: auto;
-  padding-left: 150px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border: 1px solid #55F9D9;
 }
 
 #banner1{
@@ -116,4 +122,10 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: lightgrey;
+}
+
+.pic{
+  float: left;
+  /*padding-left: 50px;*/
+
 }
