@@ -14,12 +14,21 @@ textarea{
   font-size: 15px;
 }
 
-.orange {
+.black {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
-  font-size: 60px;
+  font-size: 5vw;
   padding-top: 10px;
   color: black;
+  width: 100%;
+}
+
+.Logo {
+  text-align: center;
+  font-family: impact, Charcoal, sans-serif;
+  font-size: 8vw;
+  color: orange;
+  overflow: hidden;
 }
 
 .login {
@@ -53,13 +62,6 @@ textarea{
   height: 150px;
   width: 150px;
   padding-top: 100px;
-}
-
-#Logo {
-  text-align: center;
-  font-family: impact, Charcoal, sans-serif;
-  font-size: 90px;
-  color: orange;
 }
 
 #ForumIcon2{
@@ -146,6 +148,10 @@ a:hover {
   height: 100px;
   width: 100px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> d82e933a6aea0ac85c16ab3440c3d66a0a16b58b
 #ForumIcon3{
   height: 100px;
   width: 100px;
