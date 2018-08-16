@@ -12,3 +12,7 @@ Michael 1:
 assist Marissa in javaScript
 work on forumpage css/html/py
 assist Michael 2
+
+Michael(the new first)
+FIRST
+I'm going to assist with finishing up the profile page & the friends list. Afterwards comes the game.
