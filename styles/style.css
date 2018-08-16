@@ -14,7 +14,7 @@ textarea{
   font-size: 15px;
 }
 
-.orange {
+.black {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 5vw;
@@ -148,6 +148,10 @@ a:hover {
   height: 100px;
   width: 100px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> d82e933a6aea0ac85c16ab3440c3d66a0a16b58b
 #ForumIcon3{
   height: 100px;
   width: 100px;
