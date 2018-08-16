@@ -3,18 +3,26 @@ html, body{
 }
 
 body {
+  display: flex;
   margin-top: 5px;
   background-color: #B3E5FC; /*Previously #fffcaf*/
   background-image: url("/images/DuckBackground_1.png");
 }
+.cont{
+  display: flex;
+}
 
 textarea{
+  flex:1;
   font-family:sans-serif;
   color: lightgrey;
   font-size: 15px;
+
 }
 
-.black {
+
+
+.orange {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 5vw;
@@ -118,6 +126,10 @@ textarea{
 }
 #banner5{
   background-color: #fff6d6;
+}
+
+a:link{
+  font-family: sans-serif;
 }
 
 a:link {
