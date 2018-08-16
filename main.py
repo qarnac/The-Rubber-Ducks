@@ -129,7 +129,6 @@ class ProfilePage(webapp2.RequestHandler):
         self.response.write(mypage.render(dict))
 
 
-
 class GameStartPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/gamestart.html')
@@ -137,7 +136,7 @@ class GameStartPage(webapp2.RequestHandler):
 
     def post(self):
         #random_image = get_random_image()random_image =
-#        random_first_name = get_random_first_name()
+        random_first_name = get_random_first_name()
         random_last_name = get_random_last_name()
         duckVars = { #"random_image": random_image,
         "random_first_name": random_first_name,

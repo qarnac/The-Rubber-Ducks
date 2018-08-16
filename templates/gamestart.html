@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <head>
   <title>Citizenship Creator</title>
+  <link rel="stylesheet" href="/styles/minor.css">
 </head>
 <body>
   <div class="main">
     <form method="post">
       <h1>Welcome to the Duckpartment of Motor Vehicles!</h1> <br>
-<!--      <p>First, let's take a picture.</p>
-      <input class="user_picture" type="Submit" value="Take A Picture!">
-      <img src="/images/RDPlain.png" alt="RandomDuckPicture"> -->
+      <p>First, let's take a picture.</p>
+      <input class="user_picture"  type="Submit" value="Take A Picture!">
+      <img src="/images/RDPlain.png" id="defaultPicture" alt="RandomDuckPicture"> 
       <p>Secondly, let's get your name.</p>
       <label>Name: {{random_first_name}} {{random_last_name}}</label>
+
       <input class="user_name" type="Submit" value="Get Your Name!">
     </form>
   </div>
