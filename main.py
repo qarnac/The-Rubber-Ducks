@@ -71,9 +71,9 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/home.html')
         #test by Kristian
-#        all_posts = Post.query().fetch()
-#        logging.info(all_posts)
-#        dict = {"posts": all_posts}
+        all_posts = Post.query().fetch()
+        logging.info(all_posts)
+        dict = {"posts": all_posts}
         self.response.write(mypage.render())
         #end test
     def post(self):
