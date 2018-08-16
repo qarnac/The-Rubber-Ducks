@@ -16,9 +16,11 @@
 
   <div class="grid" id="center">
     <div id="toolbar"> <!--aka toolbar style-->
-      <p>Friends: 111</p>
-      <input type="button" onclick="alert('Friend Request Sent!')" value="Add Friend">
-      <input type="button" onclick="alert('Editting Profile')" value="Edit Profile">
+      <form class="" action = "/profile" method="post">
+        <p>You have {{friend_count}} friends in your duck pond!!!</p>
+        <input type="submit" value="Add Friend" name="counter">
+        <input type="button" onclick="alert('Editting Profile')" value="Edit Profile">
+      </form>
     </div>
     <div id="feed"><!--Should only see the user's feed aka blog posts (text only)-->
       <br>
