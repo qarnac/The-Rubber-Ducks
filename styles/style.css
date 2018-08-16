@@ -5,13 +5,19 @@ html, body{
 body {
   margin-top: 5px;
   background-color: #B3E5FC; /*Previously #fffcaf*/
-
+  background-image: url("/images/DuckBackground_1.png");
 }
 
-.black {
+textarea{
+  font-family:sans-serif;
+  color: lightgrey;
+  font-size: 15px;
+}
+
+.orange {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   padding-top: 10px;
   color: black;
 }
@@ -53,6 +59,7 @@ body {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 90px;
+  color: orange;
 }
 
 #ForumIcon2{
