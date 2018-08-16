@@ -17,9 +17,18 @@ textarea{
 .orange {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
-  font-size: 60px;
+  font-size: 5vw;
   padding-top: 10px;
   color: black;
+  width: 100%;
+}
+
+.Logo {
+  text-align: center;
+  font-family: impact, Charcoal, sans-serif;
+  font-size: 8vw;
+  color: orange;
+  overflow: hidden;
 }
 
 .login {
@@ -53,13 +62,6 @@ textarea{
   height: 150px;
   width: 150px;
   padding-top: 100px;
-}
-
-#Logo {
-  text-align: center;
-  font-family: impact, Charcoal, sans-serif;
-  font-size: 90px;
-  color: orange;
 }
 
 #ForumIcon2{
