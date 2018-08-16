@@ -120,26 +120,14 @@ class ProfilePage(webapp2.RequestHandler):
         dict = {"friend_count": 0}
         self.response.write(mypage.render(dict))
     def post(self):
-        logging.info("It works 1")
-
         current_user = self.request.cookies.get('current_user')
-        logging.info("It works 2")
-        logging.info(current_user)
-
         user = DuckUser.query(DuckUser.username == current_user).fetch()
-        logging.info("It works 3")
-        logging.info(user)
-
         user[0].friendCount = user[0].friendCount + 1
-        logging.info("It works 4")
-
         user[0].put()
-        logging.info("It works 5")
-
         dict = {"friend_count": user[0].friendCount}
         mypage = env.get_template('templates/profile.html')
         self.response.write(mypage.render(dict))
-        
+
 
 
 class GameStartPage(webapp2.RequestHandler):
