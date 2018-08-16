@@ -58,7 +58,7 @@ class LoginAccPage(webapp2.RequestHandler):
         if len(userVer)>0:
             logging.info("user found")
             logging.info("current user in login is: " + user)
-            mypage = env.get_template('templates/home.html')
+            mypage = env.get_template('templates/navigation.html')
             self.response.set_cookie('current_user', user)
             self.response.write(mypage.render())
         else:
