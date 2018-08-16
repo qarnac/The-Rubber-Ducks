@@ -35,7 +35,7 @@ class CreateNewAccPage(webapp2.RequestHandler):
         password = self.request.get('password')
         #this is michael 1 testing cookies
         self.response.set_cookie('current_name', name)
-        logging.info('user s actual name is ' + name + ', username is ' + username + ", password is " + password)
+        logging.info('users actual name is ' + name + ', username is ' + username + ", password is " + password)
         userInfo = DuckUser(name = name,
                     username = username,
                     password = password)
@@ -50,6 +50,7 @@ class LoginAccPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
     def post(self):
+        name = self.request.get('name')
         username = self.request.get('username')
         password = self.request.get('password')
         logging.info('user is ' + username + ', password is' + password)
@@ -81,8 +82,9 @@ class HomePage(webapp2.RequestHandler):
 #        username = current_user
         logging.info("new post is:" + new_post)
         current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
         logging.info("Cookies show: " + 'current_username')
-        user_post = Post(text = new_post, username = current_username, name = name, time = time.asctime( time.localtime(time.time()) ))
+        user_post = Post(text = new_post, username = current_username, name = current_name, time = time.asctime( time.localtime(time.time()) ))
         user_post.put()
         #username = self.request.get()
         #test by Kris
@@ -93,7 +95,7 @@ class HomePage(webapp2.RequestHandler):
 
         logging.info(all_posts)
         dict = {"posts": all_posts,
-                "name": name,
+                "name": current_name,
                 "username": current_username}
         self.response.write(mypage.render(dict))
         #end test
