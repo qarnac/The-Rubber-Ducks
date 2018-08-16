@@ -1,7 +1,13 @@
+/*Find a way to change the link's color*/
+
+body{
+  margin:0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr;
-  grid-template-rows: 1000px;
+  grid-template-rows: 1000px; /*Change this later to accommodate to screen height??*/
 }
 
 #left1 {
@@ -15,6 +21,20 @@
 }
 #right {
   grid-column: 3/5;
+}
+
+#profileText {
+  margin-top: 50%;
+}
+
+#profileIcon {
+  margin-top: 90%;
+}
+
+#quackLogo{
+  height: 100px;
+  width: 100px;
+  margin-top: 30%;
 }
 
 h2 {
@@ -52,10 +72,7 @@ a:hover {
     color: lightgrey;
 }
 
-#quackLogo{
-  height: 100px;
-  width: 100px;
-}
+
 #profileIcon{
   display: flex;
   flex-direction: column;
@@ -86,20 +103,10 @@ a:hover {
   /*margin-top: 30%;*/
 }
 
-#profileText {
-  margin-top: 50%;
-}
 
-#profileIcon {
-  margin-top: 90%;
-}
 
 #joinq{
   font-size: 25px;
   font-family: 'Roboto' sans-serif;
   color: black;
-}
-
-body{
-  margin:0;
 }
