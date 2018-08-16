@@ -14,7 +14,7 @@ textarea{
   font-size: 15px;
 }
 
-.orange {
+.black {
   text-align: center;
   font-family: impact, Charcoal, sans-serif;
   font-size: 60px;
@@ -143,15 +143,6 @@ a:hover {
 }
 
 #quackLogo{
-  height: 100px;
-  width: 100px;
-}
-#profileIcon{
-  height: 100px;
-  width: 100px;
-}
-
-#friendIcon{
   height: 100px;
   width: 100px;
 }
