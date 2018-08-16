@@ -9,6 +9,7 @@ class DuckUser(ndb.Model): #this is my constructor!
     friendCount = ndb.IntegerProperty(required = True, default=0)
 
 class Post(ndb.Model): #this is for the feed/home page!
+    name = ndb.StringProperty(required = False)
     username = ndb.StringProperty(required = False)
     text = ndb.StringProperty(required = True)
     time = ndb.StringProperty(required = True)

@@ -30,36 +30,37 @@ class CreateNewAccPage(webapp2.RequestHandler):
         self.response.write(mypage.render())
         logging.info('in create new account page')
     def post(self):
-        user = self.request.get('user')
+        name = self.request.get('name')
         username = self.request.get('username')
         password = self.request.get('password')
-        logging.info('user is ' + user + ', username is ' + username + ", password is " + password)
-        userInfo = DuckUser(name = user,
+        #this is michael 1 testing cookies
+        self.response.set_cookie('current_name', name)
+        logging.info('users actual name is ' + name + ', username is ' + username + ", password is " + password)
+        userInfo = DuckUser(name = name,
                     username = username,
                     password = password)
         userInfo.put()
-        jinja_values = {'name': user, 'username': username, 'password': password}
+        jinja_values = {'name': name, 'username': username, 'password': password}
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render(jinja_values))
 
 #DONT TOUCH THIS UNLESS COMPLETLY NECESSARY
 class LoginAccPage(webapp2.RequestHandler):
     def get(self):
-
         mypage = env.get_template('templates/login.html')
         self.response.write(mypage.render())
-
     def post(self):
-        user = self.request.get('username')
+        name = self.request.get('name')
+        username = self.request.get('username')
         password = self.request.get('password')
-        logging.info('user is ' + user + ', password is' + password)
-        userVer = DuckUser.query(DuckUser.username==user, DuckUser.password==password).fetch()
+        logging.info('user is ' + username + ', password is' + password)
+        userVer = DuckUser.query(DuckUser.username==username, DuckUser.password==password).fetch()
         logging.info(userVer)
         if len(userVer)>0:
             logging.info("user found")
-            logging.info("current user in login is: " + user)
+            logging.info("current user in login is: " + username)
             mypage = env.get_template('templates/navigation.html')
-            self.response.set_cookie('current_user', user)
+            self.response.set_cookie('current_username', username)
             self.response.write(mypage.render())
         else:
             logging.info("user not found")
@@ -80,20 +81,22 @@ class HomePage(webapp2.RequestHandler):
         new_post = self.request.get('new_post')
 #        username = current_user
         logging.info("new post is:" + new_post)
-        current_user = self.request.cookies.get('current_user')
-        logging.info("Cookies show: " + current_user)
-        user_post = Post(text = new_post, username = current_user, time = time.asctime( time.localtime(time.time()) ))
+        current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
+        logging.info("Cookies show: " + 'current_username')
+        user_post = Post(text = new_post, username = current_username, name = current_name, time = time.asctime( time.localtime(time.time()) ))
         user_post.put()
         #username = self.request.get()
         #test by Kris
         mypage = env.get_template('templates/home.html')
         #self.response.write(mypage.render())
         time.sleep(1)
-        all_posts = Post.query(Post.username == current_user).fetch()
+        all_posts = Post.query(Post.username == current_username).fetch()
 
         logging.info(all_posts)
         dict = {"posts": all_posts,
-                "username": current_user}
+                "name": current_name,
+                "username": current_username}
         self.response.write(mypage.render(dict))
         #end test
 

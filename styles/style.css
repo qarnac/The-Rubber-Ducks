@@ -119,7 +119,7 @@ a:hover {
 }
 
 .pic{
-  float: right;
-  padding-right: 200px;
+  float: left;
+  padding-right: 0px;
 
 }
