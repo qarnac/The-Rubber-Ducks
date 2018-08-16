@@ -4,17 +4,29 @@ Brenda, Khaled, Marissa, Michael L., Michael P.
 Khaled:
 
 add navigation page to other htmls so user can return to nav page
+new class for meme page
+css
 
+Marissa:
+driver license
+css
+vending machine
+duck pond
 
 
 Michael 1:
-assist Marissa in javaScript
-work on forumpage css/html/py
-assist Michael 2
+assist Marissa in css
+fake id
 
 Michael(the new first)
-FIRST
-I'm going to assist with finishing up the profile page & the friends list. Afterwards comes the game.
+
+
+
+
+
+
+Brenda: 
+powerpoint
 
 
 
@@ -22,3 +34,7 @@ I'm going to assist with finishing up the profile page & the friends list. After
 
 Team:
 Edit profile button puts an image of the drivers license with username name  date of birth and/or age
+
+
+change html around
+more css
