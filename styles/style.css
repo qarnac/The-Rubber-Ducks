@@ -251,9 +251,48 @@ a:hover {
 
 /*Specific to editProfile.html*/
 #driverslisence {
-  height: 500px;
-  width: 500px;
-  background-image: url("/images/IDCard_User.png");
-  background-size: cover;
-  margin-left: 150px;
+  height: 400px;
+  width: 400px;
+  padding-right: 80px;
+
+}
+
+
+#bottomLink{
+  position: fixed;
+  bottom: 0;
+  left: 44%;
+}
+#liceName{
+  z-index: 200;
+  position: absolute;
+  left: 53%;
+  top: 60%;
+}
+
+#liceUser{
+  z-index: 200;
+  position: absolute;
+  left: 52.5%;
+  top: 70%;
+}
+#liceFriends{
+  z-index: 200;
+  position: absolute;
+  left: 40%;
+  top: 81%;
+}
+
+#licePasswords{
+  z-index: 200;
+  position: absolute;
+  left: 40%;
+  top: 86%;
+}
+
+#lice{
+  z-index: 200;
+  position: absolute;
+  left: 40%;
+  top: 87%;
 }
