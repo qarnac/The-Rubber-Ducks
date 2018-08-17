@@ -17,9 +17,3 @@ class Post(ndb.Model): #this is for the feed/home page!
 class Friends(ndb.Model):
     friendName = ndb.StringProperty(required = False, default="Scrooge McDuck")
     friendUsername = ndb.StringProperty(required = True)
-# might want to include username & profile icon and picture thing
-
-# #This class is for creating....?
-# class Duck(ndb.Model): #this is my constructor!
-#     #duck info here
-# def get_friend_info(friendName, friendUsername):
