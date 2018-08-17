@@ -142,6 +142,14 @@ class EditProfilePage(webapp2.RequestHandler):
         mypage = env.get_template('templates/editProfile.html')
         self.response.write(mypage.render())
 
+class DuckPondPage(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/DuckPond.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('templates/DuckPond.html')
+        self.response.write(mypage.render())
+
 class ProfilePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/profile.html')
@@ -195,5 +203,6 @@ app = webapp2.WSGIApplication([
     ('/game', GamePage),
     ('/VendMach', VendingMachine),
     ('/Settings', SettingsPage),
-    ('/editProfile', EditProfilePage)
+    ('/editProfile', EditProfilePage),
+    ('/DuckPond', DuckPondPage)
 ], debug=True)
