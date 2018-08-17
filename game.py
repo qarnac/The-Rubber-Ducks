@@ -13,6 +13,9 @@ import random
 #    image_list=['RDPlain.png','RDZilla.png','RDBow.png','RDBubbles.png','RDCowboy.png','RDGun.png','RDInfinity.png','RDKing.png','RDMustache.png','RDSailor.png','RDShades.png','RDTop.png']
 #    return (random.choice(image_list))
 
+def get_random_image():
+    image_list=['/images/IDCard_User.png']
+    return (image_list)
 
 #def get_random_first_name():
 #    first_name_list=['Nutquacker','Quackmire','Eggbert','Quackzilla','Dr.','Locklear','Wisequack','Kevin','Firequacker','Quackerjack','Mallory','Duckleberry','Ducktape','Ducktor','Spuck','Canardinal','Quackatoa','Aqueduckt','Clusterduck']

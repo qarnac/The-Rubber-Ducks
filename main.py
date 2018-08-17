@@ -154,7 +154,7 @@ class GamePage(webapp2.RequestHandler):
         duckVars = { #"random_image": random_image,
         "random_first_name": random_first_name,
         "random_last_name": random_last_name}
-        mypage = env.get_template('templates/gameresults.html')
+        mypage = env.get_template('templates/gamestart.html')
         self.response.write(mypage.render(duckVars))
 
 app = webapp2.WSGIApplication([
