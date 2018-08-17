@@ -220,8 +220,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   overflow: auto;
-  padding-left: 195px;
-  padding-right: 100px;
+  padding-left: 30px
 }
 
 #vendingMachine {
@@ -230,7 +229,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   overflow: auto;
-  padding-right: 140px;
+  padding-left: 20px;
 }
 
 .vmcontainer {
@@ -270,7 +269,8 @@ a:hover {
 #driverslisence {
   height: 400px;
   width: 400px;
-  padding-right: 80px;
+  padding-right: 300px;
+
 
 }
 
@@ -284,34 +284,27 @@ a:hover {
   z-index: 200;
   position: absolute;
   left: 53%;
-  top: 60%;
+  top: 49%;
 }
 
 #liceUser{
   z-index: 200;
   position: absolute;
   left: 52.5%;
-  top: 70%;
+  top: 58%;
 }
 #liceFriends{
   z-index: 200;
   position: absolute;
   left: 40%;
-  top: 81%;
-}
-
-#licePasswords{
-  z-index: 200;
-  position: absolute;
-  left: 40%;
-  top: 86%;
+  top: 70%;
 }
 
 #lice{
   z-index: 200;
   position: absolute;
   left: 40%;
-  top: 87%;
+  top: 75%;
 }
 .align
 {
