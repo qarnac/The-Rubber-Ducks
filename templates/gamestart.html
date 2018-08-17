@@ -7,13 +7,11 @@
   <div class="main">
     <form method="post">
       <h1>Welcome to the Duckpartment of Motor Vehicles!</h1> <br>
-      <p>First, let's take a picture.</p>
-      <input class="user_picture"  type="Submit" value="Take A Picture!">
-      <img src="/images/RDPlain.png" id="defaultPicture" alt="RandomDuckPicture">
-      <p>Secondly, let's get your name.</p>
+      <h2>Let's get your picture and name, please!</h2>
+      <input class="user_picture"  type="Submit" value="Get your ID!">
+      <img src="/images/IDCardIcon_1.png" id="defaultPicture" alt="RandomDuckPicture">
+      <label>ID: {{random_profile_picture}}</label>
       <label>Name: {{random_first_name}} {{random_last_name}}</label>
-
-      <input class="user_name" type="Submit" value="Get Your Name!">
     </form>
   </div>
 
@@ -33,4 +31,3 @@ gameresults.html code
     <p>{{random_first_name}} {{random_last_name}}</p>
   </div>
 </body>
--->
