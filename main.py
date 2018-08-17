@@ -142,7 +142,7 @@ class ProfilePage(webapp2.RequestHandler):
         self.response.write(mypage.render(dict))
 
 
-class GameStartPage(webapp2.RequestHandler):
+class GamePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/gamestart.html')
         self.response.write(mypage.render())
@@ -165,5 +165,5 @@ app = webapp2.WSGIApplication([
     ('/navigation', NavPage),
     ('/signup', SignUpPage),
     ('/profile', ProfilePage),
-    ('/gamestart', GameStartPage)
+    ('/game', GamePage)
 ], debug=True)
