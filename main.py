@@ -110,9 +110,36 @@ class NavPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/navigation.html')
         self.response.write(mypage.render())
 
+class VendingMachine(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/VendMach.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('templates/VendMach.html')
+        self.response.write(mypage.render())
+
+
+class SettingsPage(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/settings.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('templates/settings.html')
+        self.response.write(mypage.render())
+
 class SignUpPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/signup.html')
+        self.response.write(mypage.render())
+
+class EditProfilePage(webapp2.RequestHandler):
+    def get(self):
+        logging.info('hello')
+        mypage = env.get_template('templates/editProfile.html')
+        self.response.write(mypage.render())
+    def post(self):
+        logging.info('hello2')
+        mypage = env.get_template('templates/editProfile.html')
         self.response.write(mypage.render())
 
 class ProfilePage(webapp2.RequestHandler):
@@ -165,5 +192,8 @@ app = webapp2.WSGIApplication([
     ('/navigation', NavPage),
     ('/signup', SignUpPage),
     ('/profile', ProfilePage),
-    ('/game', GamePage)
+    ('/game', GamePage),
+    ('/VendMach', VendingMachine),
+    ('/Settings', SettingsPage),
+    ('/editProfile', EditProfilePage)
 ], debug=True)
