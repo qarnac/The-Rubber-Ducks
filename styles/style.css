@@ -203,7 +203,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   overflow: auto;
-  padding-left: 140px;
+  padding-left: 195px;
   padding-right: 100px;
 }
 
@@ -213,7 +213,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   overflow: auto;
-  padding-right: 80px;
+  padding-right: 140px;
 }
 
 .vmcontainer {

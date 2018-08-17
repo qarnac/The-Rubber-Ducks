@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>Add a Duck Pond</p>
-  </body>
+<head>
+  <title>Citizenship Creator</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="vmcontainer">
+    <form method="post">
+      <h1>Welcome to the Duckpartment of Motor Vehicles!</h1> <br>
+      <h2>Let's get your picture and name, please!</h2>
+      <input onclick="changeImage" class="user_picture" type="Submit" value="Get your ID!">
+      <img src="images/IDCardIcon_1.png" id="IDCardPic">
+      <label>ID: {{random_profile_picture}}</label>
+      <label>Name: {{random_first_name}} {{random_last_name}}</label>
+    </form>
+    <h1>Duck Vending Machine</h1> <br>
+    <h2>Test your luck!</h2>
+    <img class="pic" id="vendingMachine" src="https://www.pixilart.com/images/art/2397c2d3706d017.gif">
+    <br>
+    <!--<input onclick="changeImage" class="user_picture" type="Submit" value="Get your ID!">-->
+  </div>
+  <script type="text/javascript" src="scripts/game.js"></script>
+</body>
+
+
+
+<!--
+gameresults.html code
+<!DOCTYPE html>
+<head>
+  <title>Citizenship Results</title>
+</head>
+<body>
+  <div class="pagetitle">
+    <h1>Your ID</h1>
+    <p>{{random_profile_picture}}</p>
+    <h2>Your Name</h2>
+    <p>{{random_first_name}} {{random_last_name}}</p>
+  </div>
+</body>
