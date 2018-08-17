@@ -144,9 +144,10 @@ class EditProfilePage(webapp2.RequestHandler):
     def get(self):
         current_username = self.request.cookies.get('current_username')
         current_name = self.request.cookies.get('current_name')
+
         dict = {"name": current_name,
                 "username": current_username}
-        
+
 
         mypage = env.get_template('templates/editProfile.html')
         self.response.write(mypage.render(dict))
