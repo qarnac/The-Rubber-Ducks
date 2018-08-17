@@ -139,16 +139,28 @@ class SignUpPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/signup.html')
         self.response.write(mypage.render())
-
+#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 class EditProfilePage(webapp2.RequestHandler):
     def get(self):
-        logging.info('hello')
+        current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
+        dict = {"name": current_name,
+                "username": current_username}
+        
+
         mypage = env.get_template('templates/editProfile.html')
-        self.response.write(mypage.render())
+        self.response.write(mypage.render(dict))
     def post(self):
-        logging.info('hello2')
+        current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
+        user = DuckUser.query(DuckUser.username == current_username).fetch()
+        user[0].friendCount = user[0].friendCount + 1
+        user[0].put()
+        dict = {"friend_count": user[0].friendCount,
+                "name": current_name,
+                "username": current_username}
         mypage = env.get_template('templates/editProfile.html')
-        self.response.write(mypage.render())
+        self.response.write(mypage.render(dict))
 
 class DuckPondPage(webapp2.RequestHandler):
     def get(self):
@@ -157,18 +169,24 @@ class DuckPondPage(webapp2.RequestHandler):
     def post(self):
         mypage = env.get_template('templates/DuckPond.html')
         self.response.write(mypage.render())
-
+# ##### ###### ########### ############### ######### ###### # ##### ###### ########### ############### ######### ######
 class ProfilePage(webapp2.RequestHandler):
     def get(self):
+        current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
+        dict = {"name": current_name,
+                "username": current_username}
         mypage = env.get_template('templates/profile.html')
-        dict = {"friend_count": 0}
         self.response.write(mypage.render(dict))
     def post(self):#do I need an if statement if I want to remove a friend?
-        current_user = self.request.cookies.get('current_username')
-        user = DuckUser.query(DuckUser.username == current_user).fetch()
+        current_username = self.request.cookies.get('current_username')
+        current_name = self.request.cookies.get('current_name')
+        user = DuckUser.query(DuckUser.username == current_username).fetch()
         user[0].friendCount = user[0].friendCount + 1
         user[0].put()
-        dict = {"friend_count": user[0].friendCount}
+        dict = {"friend_count": user[0].friendCount,
+                "name": current_name,
+                "username": current_username}
         mypage = env.get_template('templates/profile.html')
         self.response.write(mypage.render(dict))
 

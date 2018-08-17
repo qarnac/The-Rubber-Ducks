@@ -1,3 +1,11 @@
+# Problems Marissa Found
+/home: none :)
+/navigation: none :)
+/home: if you try to post a paragraph, you get a huge line of text that goes off the page, text input stays grey, change to black??
+game should direct to /game
+I'll add vending machine there
+
+
 # The-Rubber-Ducks
 Brenda, Khaled, Marissa, Michael L., Michael P.
 
@@ -9,10 +17,10 @@ css
 remove friend button
 
 Marissa:
-driver license
-css
-vending machine
-duck pond
+driver license DONE(ish)
+css DONE(ish)
+vending machine DONE(ish)
+duck pond I TAKE THIS BACK. NO THANK YOU. HOW ABOUT EXTENSION?
 
 
 Michael 1:

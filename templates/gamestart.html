@@ -4,19 +4,23 @@
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="vmcontainer">
     <form method="post">
       <h1>Welcome to the Duckpartment of Motor Vehicles!</h1> <br>
-      <h2>Let's get your picture and wname, please!</h2>
+      <h2>Let's get your picture and name, please!</h2>
       <input onclick="changeImage" class="user_picture" type="Submit" value="Get your ID!">
-      <img src="/images/IDCardIcon_1.png" id="IDCardPic" alt="RandomIDCardPic">
+      <img src="images/IDCardIcon_1.png" id="IDCardPic">
       <label>ID: {{random_profile_picture}}</label>
       <label>Name: {{random_first_name}} {{random_last_name}}</label>
     </form>
+    <h1>Duck Vending Machine</h1> <br>
+    <h2>Test your luck!</h2>
+    <img class="pic" id="vendingMachine" src="https://www.pixilart.com/images/art/2397c2d3706d017.gif">
+    <br>
+    <!--<input onclick="changeImage" class="user_picture" type="Submit" value="Get your ID!">-->
   </div>
-
+  <script type="text/javascript" src="scripts/game.js"></script>
 </body>
-
 
 
 

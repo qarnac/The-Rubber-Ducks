@@ -4,5 +4,5 @@ img3=new Image();
 img3.src="images/IDCars_User.png";
 
 function changeImage() {
-    document.getElementById('myImage').src=img3.src;
+    document.getElementById("images/IDCars_User.png").src=img3.src;
 }
