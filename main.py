@@ -149,7 +149,6 @@ class GamePage(webapp2.RequestHandler):
 
     def post(self):
 #        random_image = get_random_image()random_image =
-        random_image = 
 #        random_first_name = get_random_first_name()
 #        random_last_name = get_random_last_name()
         duckVars = { "random_image": random_image,
