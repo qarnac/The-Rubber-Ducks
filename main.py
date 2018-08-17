@@ -141,17 +141,21 @@ class ProfilePage(webapp2.RequestHandler):
         mypage = env.get_template('templates/profile.html')
         self.response.write(mypage.render(dict))
 
-###############################################################
+
 class GamePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/gamestart.html')
         self.response.write(mypage.render())
+
     def post(self):
-        random_first_name = get_random_first_name()
-        random_last_name = get_random_last_name()
-        duckVars = {"random_first_name": random_first_name,
-        "random_last_name": random_last_name}
-        mypage = env.get_template('templates/gameresults.html')
+#        random_image = get_random_image()random_image =
+        random_image = 
+#        random_first_name = get_random_first_name()
+#        random_last_name = get_random_last_name()
+        duckVars = { "random_image": random_image,
+#        "random_first_name": random_first_name,
+#        "random_last_name": random_last_name}
+        mypage = env.get_template('templates/gamestart.html')
         self.response.write(mypage.render(duckVars))
 
 app = webapp2.WSGIApplication([
