@@ -6,6 +6,7 @@ Khaled:
 add navigation page to other htmls so user can return to nav page
 new class for meme page
 css
+remove friend button
 
 Marissa:
 driver license
@@ -25,7 +26,7 @@ Michael(the new first)
 
 
 
-Brenda: 
+Brenda:
 powerpoint
 
 
