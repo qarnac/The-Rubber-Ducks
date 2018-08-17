@@ -11,10 +11,14 @@ body {
   display: flex;
 }
 textarea{
-  flex:1;
+
   font-family:sans-serif;
-  color: lightgrey;
+  color: black;
   font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+
 }
 .black {
   text-align: center;
@@ -23,6 +27,11 @@ textarea{
   padding-top: 10px;
   color: black;
   width: 100%;
+}
+
+.orange {
+  font-family: impact, Charcoal, sans-serif;
+  font-size: 50px;
 }
 
 .Logo {
@@ -44,7 +53,7 @@ textarea{
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   width:42%;
   height: 130%;
-  white-space: nowrap;
+  white-space: wrap;
   text-align: center;
   align: center;
   margin: auto;
