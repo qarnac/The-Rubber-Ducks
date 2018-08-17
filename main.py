@@ -151,7 +151,7 @@ class GamePage(webapp2.RequestHandler):
 #        random_image = get_random_image()random_image =
 #        random_first_name = get_random_first_name()
 #        random_last_name = get_random_last_name()
-        duckVars = { "random_image": random_image,
+#        duckVars = { "random_image": random_image,
 #        "random_first_name": random_first_name,
 #        "random_last_name": random_last_name}
         mypage = env.get_template('templates/gamestart.html')
