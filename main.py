@@ -196,7 +196,9 @@ class GamePage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/gamestart.html')
         self.response.write(mypage.render())
-
+    def post(self):
+        mypage = env.get_template('templates/settings.html')
+        self.response.write(mypage.render())
 #    def post(self):
 #        random_image = get_random_image()random_image =
 #        random_first_name = get_random_first_name()
