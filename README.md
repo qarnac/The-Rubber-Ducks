@@ -39,3 +39,7 @@ Edit profile button puts an image of the drivers license with username name  dat
 
 change html around
 more css
+
+<<<<<<<<<<<<<<<<<<<<<<<<
+notes for tomorrow:
+make duck image random
