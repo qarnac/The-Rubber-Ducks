@@ -13,12 +13,19 @@
       <h3 id="profileUserName">@{{username}}</h3><!--Will be {{username}} LATER and we'll pull this info from the database. For now, just hardcode "username"-->
     </div>
   </div>
-
+  <div id="picDiv"><!--Should only see the user's feed aka blog posts (text only)-->
+      <img class="pic" id="driverslisence" src="/images/IDCard_User.png">
+      <p id="liceName">{{name}}</p>
+      <p id="liceUser">@{{username}}</p>
+      <p id="liceFriends">You have {{friend_count}} friends!!!</p>
+      <p id="lice">Duckpartment of Motor Vehicles</p>
+  </div>
     <div id="toolbar"> <!--aka toolbar style-->
-      
+
     </div>
-    <div id="driverslisence"><!--Should only see the user's feed aka blog posts (text only)-->
-      <br>
+
+    <div>
+      <p id = "bottomLink"><a href="/navigation">Return to the Navigation Page</li></p>
     </div>
-    <p><a href="/navigation">Return to the Navigation Page</li>
+
 </body>
