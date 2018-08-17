@@ -127,6 +127,14 @@ class SettingsPage(webapp2.RequestHandler):
         mypage = env.get_template('templates/settings.html')
         self.response.write(mypage.render())
 
+class MemePage(webapp2.RequestHandler):
+    def get(self):
+        mypage = env.get_template('templates/Meme.html')
+        self.response.write(mypage.render())
+    def post(self):
+        mypage = env.get_template('templates/Meme.html')
+        self.response.write(mypage.render())
+
 class SignUpPage(webapp2.RequestHandler):
     def get(self):
         mypage = env.get_template('templates/signup.html')
@@ -155,24 +163,12 @@ class ProfilePage(webapp2.RequestHandler):
         mypage = env.get_template('templates/profile.html')
         dict = {"friend_count": 0}
         self.response.write(mypage.render(dict))
-    def post(self):
+    def post(self):#do I need an if statement if I want to remove a friend?
         current_user = self.request.cookies.get('current_username')
-        logging.info("check1")
-        logging.info(current_user)
-
         user = DuckUser.query(DuckUser.username == current_user).fetch()
-        logging.info("check2")
-        logging.info(user)
-
         user[0].friendCount = user[0].friendCount + 1
-        logging.info("check3")
-        logging.info(user[0].friendCount)
-
         user[0].put()
-        logging.info("check4")
-
         dict = {"friend_count": user[0].friendCount}
-        logging.info("check5")
         mypage = env.get_template('templates/profile.html')
         self.response.write(mypage.render(dict))
 
@@ -204,5 +200,6 @@ app = webapp2.WSGIApplication([
     ('/VendMach', VendingMachine),
     ('/Settings', SettingsPage),
     ('/editProfile', EditProfilePage),
-    ('/DuckPond', DuckPondPage)
+    ('/DuckPond', DuckPondPage),
+    ('/Memes', MemePage)
 ], debug=True)
