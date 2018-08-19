@@ -1,10 +1,3 @@
-# Problems Marissa Found
-/home: none :)
-/navigation: none :)
-/home: if you try to post a paragraph, you get a huge line of text that goes off the page, text input stays grey, change to black??
-game should direct to /game
-I'll add vending machine there
-
 
 # The-Rubber-Ducks
 Brenda, Khaled, Marissa, Michael L., Michael P.
